@@ -8,7 +8,7 @@ var geometry = new THREE.CubeGeometry(.1,.1,.1);
 var voxel = new THREE.Mesh(geometry);
 var amalgam = new THREE.Geometry();
 var material = new THREE.MeshPhongMaterial({color: 0x282828 });
-
+var amalgamesh;
 
 
 renderer.setSize( window.innerWidth, window.height );
@@ -20,9 +20,9 @@ anim();
 
 function init(){
     var position = THREE.Vector3();
-    for(var x=0,x<fieldsize,x++){
-	for(var y=0,y<fieldsize,y++){
-	    for(var z=0,z<fieldsize,z++){
+    for(var x=0;x<fieldsize;x++){
+	for(var y=0;y<fieldsize;y++){
+	    for(var z=0;z<fieldsize;z++){
 		position.set(x,y,z);
 
 
@@ -33,6 +33,9 @@ function init(){
 	    }
 	}
     }
+
+    almagamesh = new THREE.Mesh(almalgam,material);
+    scene.add(amalgam);
 
 }
 
