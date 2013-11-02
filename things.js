@@ -19,23 +19,28 @@ anim();
 
 
 function init(){
-    var position = THREE.Vector3();
+    //var position = THREE.Vector3();
     for(var x=0;x<fieldsize;x++){
 	for(var y=0;y<fieldsize;y++){
 	    for(var z=0;z<fieldsize;z++){
-		position.set(x,y,z);
+	    	var position = new THREE.Vector3(x,y,z);
 
 
-		// Procedural Fractal Generation Here
+		position = mandelbox(position);
 
-		voxel.setPosition(position);
+		voxel.position.x = position.x;
+		voxel.position.y = position.y;
+		voxel.position.z = position.z;
 		THREE.GeometryUtils.merge(amalgam, voxel);
 	    }
 	}
     }
 
     almagamesh = new THREE.Mesh(almalgam,material);
+    console.log("Adding mesh");
     scene.add(amalgam);
+    console.log("Finished adding");
+    camera.position.z = 50;
 
 }
 
