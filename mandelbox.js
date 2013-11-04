@@ -7,7 +7,7 @@ function mandelbox (v){
 	var fixed_radius = 1;
 	var min_radius = 0.5;
 	var mag_sum = 0;
-	var constant = 4;
+	var constant = 0.0;
 
 	for (var i = 0; i < 3; i++){
 		var element = v.getComponent(i);
