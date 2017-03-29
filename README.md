@@ -19,5 +19,5 @@ Project was predominantly coded during the 2013 Carlhacks event at Carleton Coll
 + links to musicforprogramming and threejs
 + canvas fallback
 
-*A live version of the EnterOblivion demo can be found [here](http://rfinz.me/demos/threejs.html)*
+*A live version of the EnterOblivion demo can be found [here](http://rfinz.me/demos/EnterOblivion)*
 
